@@ -1,0 +1,165 @@
+/* Kanban board styles */
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;;
+}
+
+/* Kanban column */
+.kanban-column {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column header styles */
+.column-header {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Distribute items across the width of the container */
+  gap: 10px; /* Controls the space between the icons, header, and buttons */
+  margin-bottom: 15px;
+  flex-wrap: nowrap; /* Prevent wrapping onto new lines */
+}
+
+/* Column header content */
+.column-header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Controls space between icons and text */
+}
+
+/* Column header group title */
+.column-header-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  line-height: 1;
+}
+
+/* User avatar styling */
+.user-avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.user-avatar-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd; /* Add subtle border around the avatar */
+}
+
+.user-avatar span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Action icon styling (plus and ellipsis) */
+.action-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* Hover effects for group actions (plus and ellipsis) */
+.column-header-content:hover .action-icon {
+  opacity: 0.7; /* Slight fade on hover */
+}
+
+/* Card styling inside the columns */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Hover effect to elevate the card */
+}
+
+/* Kanban board layout */
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #f7f9fc;
+}
+
+/* Dropdown controls styling */
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px;
+  justify-content: flex-start; /* Align to the left */
+}
+
+.controls .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.controls select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Smooth transition for column resizing */
+.kanban-column {
+  transition: min-width 0.3s ease-in-out;
+}
+
+/* Responsive design: Adjust the board layout for smaller screens */
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .kanban-column {
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
+}

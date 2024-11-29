@@ -1,0 +1,96 @@
+/* Controls styling */
+.controls {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  }
+  
+ /* Display button styles */
+.display-btn {
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0 10px 0; /* Adjusted to be left-aligned with margin */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect on Display button */
+  .display-btn:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+  }
+  
+  
+  /* Icon inside the button */
+  .display-btn .icon {
+    width: 16px;
+    height: 16px;
+    fill: #333;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: flex;
+    gap: 30px; /* Space between Grouping and Ordering */
+    flex-direction: column; /* Align items in a row */
+    margin-top: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Dropdown Item */
+  .dropdown-item {
+    display: flex;
+    align-items: center; /* Align label and select in the same row */
+    gap: 8px; /* Space between label and select */
+  }
+
+  .dropdown-item span {
+    font-size: 14px;
+    margin-bottom: 0; /* No extra space under label */
+    color: #333;
+  }
+  
+  /* Label for dropdown items */
+  .dropdown-item label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  /* Select box styling inside dropdown */
+  .dropdown-item select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    width: 160px; /* Adjust width of select box */
+  }
+  
+  /* Icon in dropdown menu */
+  .icon {
+    width: 16px;
+    height: 16px;
+    fill: #333;
+  }
+  

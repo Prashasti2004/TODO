@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App-wide styling */
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7f6;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Controls for grouping and sorting */
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px;
+  justify-content: flex-start; /* Align to the left */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.controls .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.controls select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Kanban board layout */
+/* .kanban-board {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Kanban column for grouping tickets */
+.kanban-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+} */
+
+/* Column header styles */
+
+
+/* Card styling */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ticket ID */
+.ticket-id {
+  font-size: 14px;
+  color: #777;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+}
+
+/* Card title */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 25px;
+}
+
+/* User Image - Top right corner */
+.user-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-image img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+/* Priority Icon */
+.priority {
+  margin-top: 15px;
+}
+
+/* Tag styles */
+.tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: #e3e6e8;
+  color: #666;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* Adjustments for responsive layout */
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .kanban-column {
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
   }
 }

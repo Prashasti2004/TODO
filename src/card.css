@@ -1,0 +1,94 @@
+/* Card container */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 320px;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ticket ID */
+.ticket-id {
+  font-size: 14px;
+  color: #777;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+}
+
+/* Card title */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 25px;
+}
+
+/* User Image - Top right corner */
+.user-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Priority Icons and Tags in the same line */
+.priority-tags-container {
+  display: flex;
+  align-items: center; /* Aligns icons and tags vertically */
+  gap: 10px; /* Space between priority icon and tags */
+  margin-top: 15px;
+}
+
+/* Priority Icons */
+.priority {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card .priority svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/* Priority Colors */
+.card .priority svg:nth-child(1) { fill: #8bc34a; } /* Priority 0 (Green) */
+.card .priority svg:nth-child(2) { fill: #ff9800; } /* Priority 1 (Orange) */
+.card .priority svg:nth-child(3) { fill: #f44336; } /* Priority 2 (Red) */
+.card .priority svg:nth-child(4) { fill: #d32f2f; } /* Priority 3 (Dark Red) */
+.card .priority svg:nth-child(5) { fill: #e91e63; } /* Priority 4 (Purple) */
+
+/* Tags */
+.tags {
+  display: flex;
+  gap: 10px; /* Space between tags */
+}
+
+.tag {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+}
